@@ -1,0 +1,2 @@
+1. Create a fix session by specifying: version, targetname, senderId, heartbeat interval;
+2. Configure the session: data dictionary; message storage; message sink (subscription method);

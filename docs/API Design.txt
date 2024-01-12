@@ -1,0 +1,58 @@
+The service should provide APIs below
+
+APIs needed for the service to work:
+
+Create & Delete Session
+1. CreateSession
+   TargetName
+   SenderId
+   Version
+   HeatbeatInterval
+   Server Or Client
+   return session Id.
+
+2. DeleteSession
+   SessionId
+   return boolean
+
+Config Session
+1. SetMessageStorage
+   SessoionId
+   StorageConfig
+   return boolean
+
+2. SetMessageSink
+   SessionId
+   MessageSinkConfig: {sinkType: null/file/queue, sinkLocation: "", messageFilter:"all/appOnly/Notifications"}
+   return boolean
+
+3. SetLogging
+   LogConfig: json object {loglevel, logMethod: UDP, file; DUPAddress: "", logfilePath:""}
+   return boolean
+
+4. SetSeqNo
+   SessionId
+   IncomingSeqNo
+   OutgongSeqNo
+   return boolean
+
+Start Session
+1. StartSession
+   SessionId
+   return boolean
+
+Get Session state
+1. GetSessionId
+   TargetId
+   return sessionId
+
+2. GetSeqNo
+   SessionId
+   return json object {IncomingSeqNo: 123, OutgoingSeqNo: 456}
+
+3. GetSessionInfo
+   InfoType: json object, to be defined
+   return sessionInfo: json object
+
+
+

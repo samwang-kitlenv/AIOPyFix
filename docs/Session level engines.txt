@@ -1,0 +1,13 @@
+FIX Session engine
+
+internally:
+handles all session level messages
+handles seq# sync
+handles message storage and resend request
+
+externally:
+notifies subscriber applicaiton level messages
+receives application level messages to send back
+API to manage sessions
+API to manage schedules
+API to query internal status, in support of web application management console.
